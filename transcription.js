@@ -10,39 +10,39 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 
-const intronScanner = require("./intron");
+const intronScanner = require('./genetic-information/intron');
 
 const rnaPolymerase = (nucleotide) => {
-  return nucleotide.replace(/T/g, "U");
+	return nucleotide.replace(/T/g, 'U');
 };
 
 const splicing = (rnaConverted) => {
-  // use regEx to splice by the nucleotides at the beginning and end of the introns
-  let start = rnaConverted.match(intronScanner.start);
-  let end = rnaConverted.match(intronScanner.end);
+	// use regEx to splice by the nucleotides at the beginning and end of the introns
+	let start = rnaConverted.match(intronScanner.start);
+	let end = rnaConverted.match(intronScanner.end);
 
-  if (!start || !end || start.length !== end.length) {
-    console.error("Splicing Error");
-    return rnaConverted;
-  }
+	if (!start || !end || start.length !== end.length) {
+		console.error('Splicing Error');
+		return rnaConverted;
+	}
 
-  let counter = 0;
-  // adjust to get the full exon
-  do {
-    let intronStart = rnaConverted.indexOf(start[counter]) + 1;
-    let intronEnd = rnaConverted.indexOf(end[counter]) + 7;
-    rnaConverted =
-      rnaConverted.slice(0, intronStart) + rnaConverted.slice(intronEnd);
-    counter++;
-  } while (counter < start.length);
+	let counter = 0;
+	// adjust to get the full exon
+	do {
+		let intronStart = rnaConverted.indexOf(start[counter]) + 1;
+		let intronEnd = rnaConverted.indexOf(end[counter]) + 7;
+		rnaConverted =
+			rnaConverted.slice(0, intronStart) + rnaConverted.slice(intronEnd);
+		counter++;
+	} while (counter < start.length);
 
-  return rnaConverted;
+	return rnaConverted;
 };
 
 const transcription = (dna) => {
-  let rna = rnaPolymerase(dna);
-  let mRna = splicing(rna);
-  return mRna;
+	let rna = rnaPolymerase(dna);
+	let mRna = splicing(rna);
+	return mRna;
 };
 
 module.exports = transcription;

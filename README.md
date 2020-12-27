@@ -14,8 +14,7 @@ Protein
 -- The normal allelic variant is 1600 base pairs long and contains three exons<br>
 -- The entire beta-globin protein is 146 amino acids long
 
-**To run genetic expression =>**
-`node expression.js`
+
 
 <br>
 

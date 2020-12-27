@@ -1,3 +1,3 @@
-const START_CODON = "AUG";
+const START_CODON = 'AUG';
 
 module.exports = START_CODON;
