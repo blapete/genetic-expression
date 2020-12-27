@@ -10,7 +10,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------------------------
 
-const intronScanner = require('./genetic-information/intron');
+const intronScanner = require('../genetic-information/intron');
 
 const rnaPolymerase = (nucleotide) => {
 	return nucleotide.replace(/T/g, 'U');
