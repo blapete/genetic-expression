@@ -28,3 +28,5 @@ const geneExpression = (gene) => {
 
 const haemoglobinSubunitBeta = geneExpression(HBB_GENE);
 console.log(haemoglobinSubunitBeta);
+if (haemoglobinSubunitBeta.split("-*-")[5] == "val")
+  console.log("Patient has Sickle Cell Anemia.");
