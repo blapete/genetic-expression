@@ -17,13 +17,13 @@ const translation = (mRna) => {
     if (!translating) {
       if (codon === START_CODON) {
         translating = true;
+        continue;
       } else {
         continue;
       }
     }
     let aminoAcid = CODONS[codon];
     if (aminoAcid === STOP_CODON) break;
-
     peptide.push(aminoAcid.key);
   }
 
