@@ -15,6 +15,8 @@ Protein
 -- The entire beta-globin protein is 146 amino acids long<br>
 -- Sickle Cell patients have a single base mutation causing the sixth amino acid in the polypeptide to be valine
 
+**To run genetic expression =>**
+`node expression.js`
 
 <br>
 
