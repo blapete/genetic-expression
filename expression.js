@@ -2,10 +2,10 @@
 // information flows from DNA --> RNA --> protein, a directional relationship
 // known as the central dogma of molecular biology.
 
-const transcription = require('../transcription');
-const translation = require('../translation');
-const sickleCellAnemia = require('../genetic-information/mutation');
-let HBB_GENE = require('../genetic-information/dna');
+const transcription = require('./transcription');
+const translation = require('./translation');
+const sickleCellAnemia = require('./genetic-information/mutation');
+let HBB_GENE = require('./genetic-information/dna');
 
 const geneExpression = (gene) => {
 	let mutation = sickleCellAnemia(gene);

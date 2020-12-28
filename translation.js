@@ -4,9 +4,9 @@
 
 // tRNAs, are molecular "bridges" that connect mRNA codons to the amino acids they encode.
 
-const START_CODON = require('../genetic-information/start');
-const STOP_CODON = require('../genetic-information/stop');
-const CODONS = require('../genetic-information/codons');
+const START_CODON = require('./genetic-information/start');
+const STOP_CODON = require('./genetic-information/stop');
+const CODONS = require('./genetic-information/codons');
 
 const translation = (mRna) => {
 	let peptide = [];
