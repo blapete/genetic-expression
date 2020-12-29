@@ -15,7 +15,7 @@ const geneExpression = (gene) => {
 	let count = 0;
 	let mRna = transcription(gene);
 	let protein = translation(mRna).split('');
-	let formattedProtein = protein.reduce((x, y) => {
+	 return protein.reduce((x, y) => {
 		count++;
 		if (count == 1 || count == protein.length || count == protein.length - 1) {
 			return x + '';
@@ -23,7 +23,7 @@ const geneExpression = (gene) => {
 			return x + y;
 		}
 	}, '');
-	return formattedProtein;
+
 };
 
 const haemoglobinSubunitBeta = geneExpression(HBB_GENE);
