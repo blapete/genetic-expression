@@ -18,6 +18,4 @@ Protein
 **To run genetic expression =>**
 `node expression.js`
 
-<br>
 
-inspired by: <a href="https://github.com/davidgilbertson" target="_blank">@davidgilbertson</a>
