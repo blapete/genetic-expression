@@ -19,3 +19,6 @@ Protein
 `node expression.js`
 
 
+see https://github.com/blapete/genetic__expression--visual for sister repo
+
+
